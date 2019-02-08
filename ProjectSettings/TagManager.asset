@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Target
+  - Enemy
+  - Bullet
+  - Spawns
+  - Particle System
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Enemies
+  - Bullets
+  - Allies
+  - Boundaries
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 326208335
+    locked: 0
+  - name: Foreground
+    uniqueID: 3150995225
+    locked: 0
+  - name: Enemies
+    uniqueID: 3386938573
+    locked: 0
+  - name: PlayerBack
+    uniqueID: 98783505
+    locked: 0
+  - name: PlayerMiddle
+    uniqueID: 1220094301
+    locked: 0
+  - name: Weapons
+    uniqueID: 1826041979
+    locked: 0
+  - name: PlayerFront
+    uniqueID: 3035274211
+    locked: 0
