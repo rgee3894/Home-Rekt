@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Spawns
   - Particle System
+  - Projectile Spawn
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Bullets
   - Allies
   - Boundaries
-  - 
+  - Explosions
   - 
   - 
   - 
@@ -43,9 +44,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 326208335
     locked: 0
@@ -66,4 +64,7 @@ TagManager:
     locked: 0
   - name: PlayerFront
     uniqueID: 3035274211
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0

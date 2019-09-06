@@ -17,8 +17,6 @@ public class PlayerMovement : MonoBehaviour
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
     
     private Rigidbody2D rb;
-    private Animator animator;
-
     [HideInInspector] public bool canMove;
     
     // Start is called before the first frame update

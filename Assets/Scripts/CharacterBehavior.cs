@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterBehavior : MonoBehaviour
 {
     [SerializeField]protected float health;
+    [SerializeField]protected float maxHealth;
     [SerializeField]protected float attack;
 
     [SerializeField] protected float moveSpeed;
@@ -13,7 +14,14 @@ public class CharacterBehavior : MonoBehaviour
 
     private float nextAttack;
 
-    public void Attack(float dmg, GameObject target)
+    void Awake()
+    {
+        health=maxHealth;
+    }
+
+    
+
+    public virtual void Attack(float dmg, GameObject target)
     {
        if(Time.time > nextAttack) 
        {
@@ -33,7 +41,8 @@ public class CharacterBehavior : MonoBehaviour
     public void GetHurt(float dmg)
     {
         this.health-=dmg;
-
+        if(GetComponent<Flasher>() != null) this.GetComponent<Flasher>().Flash();
+        AdditionalHurt();
         if(this.health <= 0)
         {
             //DIE
@@ -42,10 +51,15 @@ public class CharacterBehavior : MonoBehaviour
 
     }
 
+    public virtual void AdditionalHurt() {}
+    public virtual void AdditionalDie() {}
     public virtual void Die()
-    {
+    {   
+        AdditionalDie();
         Destroy(this.gameObject);
-    }   
+    }
+    
+       
     
 
 }

@@ -1,0 +1,369 @@
+fileFormatVersion: 2
+guid: 259c224a12404634f92aaca2499ce9c6
+ScriptedImporter:
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Cell_GO/Cell_GO
+  - first:
+      1: 100002
+    second: Cell_GO/Cell_GO/Cell
+  - first:
+      1: 100004
+    second: Cell_GO/Cell_GO/Mitochondria
+  - first:
+      1: 100006
+    second: Cell_GO/Cell_GO/Nucleus
+  - first:
+      1: 100008
+    second: Cell_GO/Cell_GO/Wall Structure
+  - first:
+      1: 100010
+    second: Cell_GO/Cell_GO/Wall Structure 2
+  - first:
+      1: 100012
+    second: Cell_GO/Cell_GO/Wall Structure 3
+  - first:
+      4: 400000
+    second: Cell_GO/Cell_GO/Transform
+  - first:
+      4: 400002
+    second: Cell_GO/Cell_GO/Cell/Transform
+  - first:
+      4: 400004
+    second: Cell_GO/Cell_GO/Mitochondria/Transform
+  - first:
+      4: 400006
+    second: Cell_GO/Cell_GO/Nucleus/Transform
+  - first:
+      4: 400008
+    second: Cell_GO/Cell_GO/Wall Structure/Transform
+  - first:
+      4: 400010
+    second: Cell_GO/Cell_GO/Wall Structure 2/Transform
+  - first:
+      4: 400012
+    second: Cell_GO/Cell_GO/Wall Structure 3/Transform
+  - first:
+      28: 2800000
+    second: Cell Level
+  - first:
+      212: 21200000
+    second: Cell_GO/Cell_GO/Cell/SpriteRenderer
+  - first:
+      212: 21200002
+    second: Cell_GO/Cell_GO/Mitochondria/SpriteRenderer
+  - first:
+      212: 21200004
+    second: Cell_GO/Cell_GO/Nucleus/SpriteRenderer
+  - first:
+      212: 21200006
+    second: Cell_GO/Cell_GO/Wall Structure/SpriteRenderer
+  - first:
+      212: 21200008
+    second: Cell_GO/Cell_GO/Wall Structure 2/SpriteRenderer
+  - first:
+      212: 21200010
+    second: Cell_GO/Cell_GO/Wall Structure 3/SpriteRenderer
+  - first:
+      213: 21300000
+    second: Nucleus
+  - first:
+      213: 21300002
+    second: Wall Structure 2
+  - first:
+      213: 21300004
+    second: Wall Structure 3
+  - first:
+      213: 21300006
+    second: Wall Structure
+  - first:
+      213: 21300008
+    second: Mitochondria
+  - first:
+      213: 21300010
+    second: Cell
+  - first:
+      1001: 100100000
+    second: Cell_GO
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Nucleus
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2308
+      y: 1551
+      width: 226
+      height: 226
+    spriteID: 2616082a526fad94099b97427880863b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1156, y: 411}
+  - name: Wall Structure 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2308
+      y: 815
+      width: 595
+      height: 728
+    spriteID: d47dc682c6ed9924e80fe5c47a27e8e6
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 812, y: 66}
+  - name: Wall Structure 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3007
+      y: 4
+      width: 856
+      height: 531
+    spriteID: 95708b5d0695af945a5735f43b991900
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2186, y: -1491}
+  - name: Wall Structure
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2308
+      y: 4
+      width: 691
+      height: 803
+    spriteID: a7108c806a8c16441bb95ba808fe96c3
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1757, y: -615}
+  - name: Mitochondria
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2308
+      y: 1785
+      width: 152
+      height: 105
+    spriteID: 7008da7205f66784a9bdba26ff6ec43b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1908, y: 176}
+  - name: Cell
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2296
+      height: 2320
+    spriteID: 53185bea0b2e9bd4696e16633ae51a22
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -127, y: -110}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 0
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 2464, y: 2692}
+  textureActualWidth: 4096
+  textureActualHeight: 4096
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Nucleus
+    spriteName: Nucleus
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2616082a526fad94099b97427880863b
+    layerID: 15
+    mosaicPosition: {x: 2308, y: 1551}
+  - name: Wall Structure 2
+    spriteName: Wall Structure 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d47dc682c6ed9924e80fe5c47a27e8e6
+    layerID: 12
+    mosaicPosition: {x: 2308, y: 815}
+  - name: Wall Structure 3
+    spriteName: Wall Structure 3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 95708b5d0695af945a5735f43b991900
+    layerID: 13
+    mosaicPosition: {x: 3007, y: 4}
+  - name: Wall Structure
+    spriteName: Wall Structure
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a7108c806a8c16441bb95ba808fe96c3
+    layerID: 7
+    mosaicPosition: {x: 2308, y: 4}
+  - name: Mitochondria
+    spriteName: Mitochondria
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7008da7205f66784a9bdba26ff6ec43b
+    layerID: 11
+    mosaicPosition: {x: 2308, y: 1785}
+  - name: Cell
+    spriteName: Cell
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 53185bea0b2e9bd4696e16633ae51a22
+    layerID: 4
+    mosaicPosition: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+  boneGOs: []
+  generateGOHierarchy: 0
+  textureAssetName: Cell Level
+  prefabAssetName: Cell Level_GO

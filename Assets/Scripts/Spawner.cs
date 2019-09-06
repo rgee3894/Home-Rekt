@@ -5,25 +5,35 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    public GameObject obj;
+    [SerializeField] protected GameObject [] objectsToSpawn;
+
     public bool keepSpawning = true;
-    public float spawnTime;
-    public float spawnDelay;
+    [SerializeField]protected float spawnDelay;
+    [SerializeField] protected string spawnTag;
 
-    private GameObject [] spawns;
+    protected GameObject [] spawns;
 
-    private GameObject [] selectedSpawns;
-    
+    protected GameObject [] selectedSpawns;
+
+    protected List<GameObject> spawnedObjects;
 
     void Start()
     {
-        spawns = GameObject.FindGameObjectsWithTag("Spawns");
-        //StartCoroutine(SpawnAtIntervals(spawnDelay)); // Or whatever delay we want.
-        InvokeRepeating("MultiSpawn",spawnTime,spawnDelay);
+        Initialize();
     }
 
-    public void MultiSpawn()
+    protected void Initialize()
     {
+        spawnedObjects = new List<GameObject>();
+        spawns = GameObject.FindGameObjectsWithTag(spawnTag);
+        Invoke("MultiSpawn",spawnDelay);
+
+    }
+
+
+    protected void MultiSpawn()
+    {   
+        if(spawnedObjects.Count > 0) return;
         SelectSpawns();
         Spawn();
         if(!keepSpawning)
@@ -32,21 +42,7 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    IEnumerator SpawnAtIntervals(float secondsBetweenSpawns)
-    {
-        // Repeat until keepSpawning == false or this GameObject is disabled/destroyed.
-        while(keepSpawning)
-        {
-            // Put this coroutine to sleep until the next spawn time.
-            yield return new WaitForSeconds(secondsBetweenSpawns);
-
-            // Now it's time to spawn again.
-            SelectSpawns();
-            Spawn();
-        }
-    }
-
-    private void SelectSpawns()
+    protected virtual void SelectSpawns()
     {
         int numSpawns = Random.Range(1,spawns.Length);
 
@@ -54,16 +50,21 @@ public class Spawner : MonoBehaviour
 
         for(int i = 0; i < numSpawns; i++)
         {
-            selectedSpawns[i] = spawns[Random.Range(0,spawns.Length-1)];
+            selectedSpawns[i] = spawns[Random.Range(0,spawns.Length)];
         }
     }
     
-    private void Spawn()
+    protected virtual void Spawn()
     {
         for(int i = 0; i < selectedSpawns.Length; i++)
         {
-            Instantiate(obj,selectedSpawns[i].transform.position,Quaternion.identity);
+            spawnedObjects.Add(Instantiate(objectsToSpawn[Random.Range(0,objectsToSpawn.Length)],selectedSpawns[i].transform.position,Quaternion.identity));
         }
         
+    }
+
+    public virtual void RemoveSpawnedObject(GameObject obj)
+    {
+        spawnedObjects.Remove(obj);
     }
 }

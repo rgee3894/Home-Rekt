@@ -1,47 +1,36 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Audio;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioClip shoot,enemyAttack,enemyDead,houseDead;
-    public static AudioSource audioSource;
+    private static AudioManager instance;
+    public Sound [] sounds;
+    public static AudioManager SharedInstance() {return instance;}
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        shoot = Resources.Load<AudioClip>("Audio/Shoot");
-        enemyAttack = Resources.Load<AudioClip>("Audio/Enemy Attack");
-        enemyDead = Resources.Load<AudioClip>("Audio/Enemy Dead");
-        houseDead = Resources.Load<AudioClip>("Audio/House Dead");
-
-        audioSource = this.GetComponent<AudioSource>();
-
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public static void PlaySound(string clip)
-    {
-        switch(clip)
-        {
-            case "shoot":
-                audioSource.PlayOneShot(shoot);
-                break;
-            case "enemyAttack":
-                audioSource.PlayOneShot(enemyAttack);
-                break;
-            case "enemyDead":
-                audioSource.PlayOneShot(enemyDead);
-                break;
-            case "houseDead":
-                audioSource.PlayOneShot(houseDead);
-                break;
+        if(instance != null && instance != this) {
+            Destroy(this.gameObject);
+        } else {
+            instance = this;
         }
+        
+        
+        
+        foreach(Sound s in sounds) {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+        }
+    }
+    public void PlaySound(string clip)
+    {
+        Sound s = Array.Find(sounds,sounds=>sounds.soundName==clip);
+        s.source.PlayOneShot(s.clip);
+        
+
     }
 }

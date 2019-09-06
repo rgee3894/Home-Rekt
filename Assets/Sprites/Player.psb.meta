@@ -1,24 +1,57 @@
 fileFormatVersion: 2
 guid: 82a6008e9c2579f4cb36b543ff6a3b00
 ScriptedImporter:
-  fileIDToRecycleName:
-    100000: Cannons_GO/Cannons_GO
-    100002: Cannons_GO/Cannons_GO/Body
-    100004: Cannons_GO/Cannons_GO/Cannons
-    100006: Cannons_GO/Cannons_GO/Eyes
-    400000: Cannons_GO/Cannons_GO/Transform
-    400002: Cannons_GO/Cannons_GO/Body/Transform
-    400004: Cannons_GO/Cannons_GO/Cannons/Transform
-    400006: Cannons_GO/Cannons_GO/Eyes/Transform
-    2800000: Player
-    21200000: Cannons_GO/Cannons_GO/Body/SpriteRenderer
-    21200002: Cannons_GO/Cannons_GO/Cannons/SpriteRenderer
-    21200004: Cannons_GO/Cannons_GO/Eyes/SpriteRenderer
-    21300000: Eyes
-    21300002: Body
-    21300004: Cannons
-    100100000: Cannons_GO
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Cannons_GO/Cannons_GO
+  - first:
+      1: 100002
+    second: Cannons_GO/Cannons_GO/Body
+  - first:
+      1: 100004
+    second: Cannons_GO/Cannons_GO/Cannons
+  - first:
+      1: 100006
+    second: Cannons_GO/Cannons_GO/Eyes
+  - first:
+      4: 400000
+    second: Cannons_GO/Cannons_GO/Transform
+  - first:
+      4: 400002
+    second: Cannons_GO/Cannons_GO/Body/Transform
+  - first:
+      4: 400004
+    second: Cannons_GO/Cannons_GO/Cannons/Transform
+  - first:
+      4: 400006
+    second: Cannons_GO/Cannons_GO/Eyes/Transform
+  - first:
+      28: 2800000
+    second: Player
+  - first:
+      212: 21200000
+    second: Cannons_GO/Cannons_GO/Body/SpriteRenderer
+  - first:
+      212: 21200002
+    second: Cannons_GO/Cannons_GO/Cannons/SpriteRenderer
+  - first:
+      212: 21200004
+    second: Cannons_GO/Cannons_GO/Eyes/SpriteRenderer
+  - first:
+      213: 21300000
+    second: Eyes
+  - first:
+      213: 21300002
+    second: Body
+  - first:
+      213: 21300004
+    second: Cannons
+  - first:
+      1001: 100100000
+    second: Cannons_GO
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -89,6 +122,7 @@ ScriptedImporter:
       width: 0
       height: 0
     spriteID: 
+    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -112,6 +146,7 @@ ScriptedImporter:
       width: 519
       height: 120
     spriteID: f8e5dbaa942b3dc4fb67ddde92d1f6f1
+    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -133,6 +168,7 @@ ScriptedImporter:
       width: 903
       height: 903
     spriteID: 9ed396e37b1d6344bb7e88ed31552b45
+    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -154,6 +190,7 @@ ScriptedImporter:
       width: 498
       height: 603
     spriteID: 8eafd8800b494b64e82103fd152b2652
+    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -205,3 +242,5 @@ ScriptedImporter:
     dimension: {x: 0, y: 0}
   boneGOs: []
   generateGOHierarchy: 0
+  textureAssetName: Player
+  prefabAssetName: Player_GO

@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7704446627000093237}
   m_Layer: 8
-  m_Name: Bullet Spawn
-  m_TagString: Untagged
+  m_Name: Left Bullet Spawn
+  m_TagString: Projectile Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7704446627000093237
 Transform:
   m_ObjectHideFlags: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6489020953664879732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.12, z: 0}
+  m_LocalPosition: {x: -1.84, y: 7.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7411964673819920670}
@@ -41,9 +41,11 @@ GameObject:
   - component: {fileID: 7411964673819920670}
   - component: {fileID: 7411964673819920671}
   - component: {fileID: 8286395922781922649}
-  - component: {fileID: 228886758}
+  - component: {fileID: 2595332706188703630}
   - component: {fileID: 228886759}
   - component: {fileID: 1831608627273574475}
+  - component: {fileID: 2103223473968922668}
+  - component: {fileID: 924735473934495354}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -63,6 +65,8 @@ Transform:
   m_LocalScale: {x: 0.38, y: 0.38, z: 0.38}
   m_Children:
   - {fileID: 7704446627000093237}
+  - {fileID: 7095217240289040313}
+  - {fileID: 639884559893070679}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -126,9 +130,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4da6be4628f19b41907165d84afc61f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  m_MovementSmoothing: 0.093
---- !u!50 &228886758
+  speed: 30
+  m_MovementSmoothing: 0.184
+  canMove: 0
+--- !u!50 &2595332706188703630
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -161,8 +166,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c1c7eb84261db469643a0887bbe911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 4592712190142159819, guid: bf9eb2182e013c94bb7712ca75418f48, type: 3}
-  bulletSpawn: {fileID: 6489020953664879732}
+  primary: {fileID: 4592712190142159819, guid: bf9eb2182e013c94bb7712ca75418f48, type: 3}
+  secondary: {fileID: 873060552295291296, guid: ff10731156c6e134da5b63eecd1ac6c2,
+    type: 3}
+  projectileSpawns: []
+  killCount: 0
+  canShoot: 0
 --- !u!58 &1831608627273574475
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -179,3 +188,96 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4.81
+--- !u!114 &2103223473968922668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7411964673819920864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d5b5aabcb0e8fd41bcefb2f1baf105b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 0}
+  amountToPool: 10
+--- !u!114 &924735473934495354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7411964673819920864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7286dfc1a7459d47b45a4465544b974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 100
+  attack: 0
+  moveSpeed: 0
+  attackRate: 0
+  healthBar: {fileID: 0}
+--- !u!1 &7803776646664868570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639884559893070679}
+  m_Layer: 8
+  m_Name: Right Bullet Spawn
+  m_TagString: Projectile Spawn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &639884559893070679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803776646664868570}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.84, y: 7.38, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 7411964673819920670}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7996752118131505810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7095217240289040313}
+  m_Layer: 8
+  m_Name: Mid Bullet Spawn
+  m_TagString: Projectile Spawn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7095217240289040313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996752118131505810}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 7.38, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 7411964673819920670}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
